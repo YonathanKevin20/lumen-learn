@@ -16,7 +16,11 @@ class ExampleController extends Controller
     {
         $q = $req->q;
 
-        return response()->json(['query' => $q]);
+        return response()->json([
+            'query' => $q,
+            'url' => $req->url(),
+            'method' => $req->method()
+        ]);
     }
 
     public function show($id)
