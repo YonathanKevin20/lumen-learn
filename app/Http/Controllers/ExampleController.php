@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class ExampleController extends Controller
 {
     public function __construct()
     {
         //
+    }
+
+    public function index(Request $req)
+    {
+        $q = $req->q;
+
+        return response()->json(['query' => $q]);
     }
 
     public function show($id)

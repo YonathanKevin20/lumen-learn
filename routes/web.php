@@ -32,3 +32,7 @@ $router->get('role[/{role_name:[A-Za-z]+}]', function ($role_name = null) { // O
 $router->get('profile', [
     'as' => 'profile', 'uses' => 'ExampleController@showProfile'
 ]);
+
+$router->get('search', [
+    'as' => 'search', 'uses' => 'ExampleController@index'
+]);
