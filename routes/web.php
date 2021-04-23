@@ -21,6 +21,10 @@ $router->get('foo', function () {
     return response()->json(['message' => 'success']);
 });
 
+$router->get('user', [
+    'as' => 'user', 'uses' => 'ExampleController@index'
+]);
+
 $router->get('user/{id}', [ // Required Parameters
     'as' => 'user', 'uses' => 'ExampleController@show'
 ]);
@@ -34,5 +38,5 @@ $router->get('profile', [
 ]);
 
 $router->get('search', [
-    'as' => 'search', 'uses' => 'ExampleController@index'
+    'as' => 'search', 'uses' => 'ExampleController@search'
 ]);
