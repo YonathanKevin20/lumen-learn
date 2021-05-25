@@ -1,7 +1,7 @@
 <?php
 
 function getPaginationArray($page, $last_page)
-{    
+{
     $arr = [];
     $awal = 1;
     $akhir = $last_page;
